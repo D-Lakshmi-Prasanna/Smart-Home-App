@@ -1,0 +1,93 @@
+/* Container Styling */
+.settings-container {
+  max-width: 900px;
+  margin: 3em auto;
+  padding: 2.5em;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box; 
+  overflow: hidden; 
+}
+
+/* Heading Styling */
+.settings-container h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #43aa48;
+  margin: 1em 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Navigation Styling */
+.settings-container nav {
+  margin-bottom: 2em;
+}
+
+.settings-container nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.settings-container nav a {
+  text-decoration: none;
+  color: #1abc9c;
+  font-weight: bold;
+  padding: 0.8em 1.5em;
+  border: 2px solid #1abc9c;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.settings-container nav a:hover {
+  background-color: #1abc9c;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Device Control Styling */
+.settings-container app-device-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: calc(100% - 2em); 
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  box-sizing: border-box; 
+  overflow: hidden; 
+  transition: transform 0.2s ease;
+}
+
+.settings-container app-device-control:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .settings-container nav ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .settings-container h1 {
+    font-size: 2em;
+  }
+  
+  .settings-container app-device-control {
+    max-width: 100%;
+    padding: 1em;
+  }
+}

@@ -1,0 +1,14 @@
+<div class="notifications">
+  <h3 class="notifications-title">NOTIFICATIONS</h3>
+  <div *ngIf="notifications.length === 0" class="no-notifications">No notifications available.</div>
+  <ul class="notifications-list">
+    <li *ngFor="let notification of notifications" class="notification-item">
+      {{ notification }}
+    </li>
+  </ul>
+  <nav class="notifications-nav">
+    <ul>
+      <a routerLink="/dashboard" class="back-link">Back to Dashboard</a>
+    </ul>
+  </nav>
+</div>

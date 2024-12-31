@@ -1,0 +1,116 @@
+/* Notifications Container Styling */
+.notifications {
+  max-width: 750px;
+  margin: 3em auto;
+  padding: 2.5em;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  background: linear-gradient(135deg, #eafaf1, #f1f8e9);
+}
+
+/* Title Styling */
+.notifications-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #46c44c;
+  margin: 1em 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* No Notifications Styling */
+.no-notifications {
+  font-size: 1.3em;
+  color: #7f8c8d;
+  margin: 2em 0;
+  font-style: italic;
+}
+
+/* Notifications List Styling */
+.notifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.notification-item {
+  padding: 1.2em;
+  margin-bottom: 1em;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.2em;
+  color: #34495e;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  border-left: 5px solid #1abc9c;
+}
+
+.notification-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: #ecf9f4;
+}
+
+.notification-item::before {
+  content: '🔔';
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  color: #1abc9c;
+}
+
+/* Navigation Styling */
+.notifications-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 2em 0 0 0;
+}
+
+.notifications-nav .back-link {
+  text-decoration: none;
+  color: #1abc9c;
+  font-weight: bold;
+  padding: 0.8em 1.5em;
+  border: 2px solid #1abc9c;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notifications-nav .back-link:hover {
+  background-color: #1abc9c;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .notifications {
+    padding: 1.8em;
+  }
+
+  .notifications-title {
+    font-size: 2.2em;
+  }
+
+  .notification-item {
+    font-size: 1.1em;
+  }
+
+  .notifications-nav .back-link {
+    padding: 0.7em 1.3em;
+    font-size: 1em;
+  }
+}

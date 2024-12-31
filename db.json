@@ -1,0 +1,24 @@
+{
+  "devices": [
+    {
+      "id": 1,
+      "name": "Living Room Light",
+      "type": "Light",
+      "status": "Off"
+    },
+    {
+      "id": 2,
+      "name": "Bedroom Thermostat",
+      "type": "Thermostat",
+      "status": "On",
+      "temperature": 14
+    },
+    {
+      "id": 3,
+      "name": "Security Camera",
+      "type": "Camera",
+      "status": "On",
+      "resolution": "720p"
+    }
+  ]
+}

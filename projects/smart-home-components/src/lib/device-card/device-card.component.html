@@ -1,0 +1,12 @@
+<div class="devices-container">
+  <div *ngFor="let device of devices" class="device-card" [ngClass]="{'thermostat': device.type === 'Thermostat'}">
+    <h3>{{ device.name }}</h3>
+    <p>Type: {{ device.type }}</p>
+    <p>Status: 
+      <span>
+        {{ device.status }}
+      </span>
+    </p>
+    <a [routerLink]="['/device-settings', device.id]">Manage Device</a>
+  </div>
+</div>

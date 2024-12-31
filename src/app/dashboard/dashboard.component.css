@@ -1,0 +1,82 @@
+/* Dashboard Title Styling */
+.dashboard-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em; /* Reduced font size */
+  font-weight: 700;
+  color: #46c44c;
+  margin: 0.5em 0; /* Reduced margin */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.03em; /* Reduced spacing */
+}
+
+/* Device Card Styling */
+.device-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em; /* Reduced gap */
+  margin: 1.5em auto; /* Reduced margin */
+  padding: 1em;
+  background-color: #f1f8e9;
+  border-radius: 8px; /* Reduced border radius */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+  max-width: 85%; /* Slightly narrower */
+}
+
+.device-card app-device-card {
+  flex: 1 1 250px; /* Adjusted width */
+  max-width: 400px; /* Reduced max width */
+  padding: 0.8em; /* Reduced padding */
+  background: white;
+  border: 2px solid #c8e6c9;
+  border-radius: 8px; /* Smaller border radius */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.device-card app-device-card:hover {
+  transform: translateY(-3px); /* Reduced movement */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+}
+
+.dashboard-container {
+  max-width: 800px; /* Reduced max width */
+  margin: 2em auto; /* Reduced margin */
+  padding: 2em; /* Reduced padding */
+  background-color: #ffffff;
+  border-radius: 12px; /* Reduced border radius */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navigation Styling */
+.dashboard-container nav {
+  margin-bottom: 1.5em; /* Reduced margin */
+}
+
+.dashboard-container nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em; /* Reduced gap */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-container nav a {
+  text-decoration: none;
+  color: #1abc9c;
+  font-weight: bold;
+  padding: 0.6em 1.2em; /* Reduced padding */
+  border: 2px solid #1abc9c;
+  border-radius: 20px; /* Smaller border radius */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-container nav a:hover {
+  background-color: #1abc9c;
+  color: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}

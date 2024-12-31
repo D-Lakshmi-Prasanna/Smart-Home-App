@@ -1,0 +1,7 @@
+{
+    "devices": [
+      { "id": 1, "name": "Light", "type": "Light", "status": "Off" },
+      { "id": 2, "name": "Thermostat", "type": "Thermostat", "status": "Off", "temperature": 22 }
+    ]
+  }
+  

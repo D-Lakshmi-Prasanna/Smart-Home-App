@@ -1,0 +1,116 @@
+/* General Card Styling */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  margin: 2em auto;
+  background: linear-gradient(145deg, #ffffff, #97d35c);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-color: #388e3c;
+  border-width: 2;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Title Styling */
+.card-title {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 1em;
+  text-transform: capitalize;
+}
+
+/* Card Info Styling */
+.card-info {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #084e2e;
+  margin-bottom: 1.5em;
+}
+
+/* Button Styling */
+.btn {
+  background-color: #1abc9c;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.7em 1.5em;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #16a085;
+  transform: scale(1.05);
+}
+
+/* Label Styling */
+.label {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #388e3c;
+  margin-top: 1em;
+  display: block;
+}
+
+/* Input Field Styling */
+.input-field {
+  width: 80%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  border: 2px solid #dcedc8;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1em;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #81c784;
+}
+
+/* Error Message Styling */
+.error-message p {
+  font-size: 0.9em;
+  color: #d32f2f;
+  margin-top: 0.5em;
+}
+
+/* Video Container Styling */
+.video-container {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  margin-top: 1em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown Styling */
+.dropdown {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5em;
+  margin-top: 1em;
+  border: 2px solid #c8e6c9;
+  border-radius: 6px;
+  font-size: 1em;
+  color: #616161;
+  transition: border-color 0.3s ease;
+}
+
+.dropdown:focus {
+  border-color: #81c784;
+}

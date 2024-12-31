@@ -62,7 +62,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "SmartHomeApp:build"
+            "browserTarget": "SmartHomeApp:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -119,6 +120,50 @@
           }
         }
       }
-    }},
-  "defaultProject": "SmartHomeApp"
+    },
+    "smart-home-components": {
+      "projectType": "library",
+      "root": "projects/smart-home-components",
+      "sourceRoot": "projects/smart-home-components/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/smart-home-components/tsconfig.lib.json",
+            "project": "projects/smart-home-components/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/smart-home-components/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/smart-home-components/src/test.ts",
+            "tsConfig": "projects/smart-home-components/tsconfig.spec.json",
+            "karmaConfig": "projects/smart-home-components/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/smart-home-components/tsconfig.lib.json",
+              "projects/smart-home-components/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "SmartHomeApp",
+  "cli": {
+    "analytics": "9a05ad9c-8489-412c-a930-e8266a5f548f"
+  }
 }

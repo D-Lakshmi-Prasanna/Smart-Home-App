@@ -1,0 +1,36 @@
+<div class="card">
+  <h2 class="card-title">{{ device.name }}</h2>
+  <span class="card-info">{{ device.status }}</span>
+  <button class="btn" (click)="toggleDevice(device)">Toggle</button>
+
+  <div *ngIf="device.type === 'Thermostat'">
+    <label class="label">Temperature:</label>
+    <input
+      type="number"
+      class="input-field"
+      [(ngModel)]="device.temperature"
+      (change)="adjustTemperature(device.temperature)"
+      [disabled]="device.status === 'Off'"
+      min="10"
+      max="30"
+    /><br>
+    <span class="card-info" *ngIf="device.type === 'Thermostat'">{{ device.temperature }}°C</span>
+    <div *ngIf="device.temperature === 30" class="error-message">
+      <p>Temperature must be between 10°C and 30°C</p>
+    </div>
+    <div *ngIf="device.temperature === 10" class="error-message">
+      <p>Temperature must be between 10°C and 30°C</p>
+    </div>
+  </div>
+
+  <div *ngIf="device.type === 'Camera'">
+    <video controls autoplay class="video-container">
+      <source src="/assets/camera.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <label class="label">Resolution:</label>
+    <select class="dropdown" (change)="adjustCameraSetting('resolution', $event.target.value)">
+      <option *ngFor="let res of ['720p', '1080p', '4K']">{{ res }}</option>
+    </select>
+  </div>
+</div>
